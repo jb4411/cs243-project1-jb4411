@@ -6,10 +6,10 @@
 
 #define MAX_TOKEN_SIZE 79
 
-int classify( char chr ) {
+int classify( int chr ) {
 	if( chr == ' ' || chr == '\t' || chr == '\n' ) {
 		return CC_WS;
-	} else if( (chr >= 'A' && chr <= 'Z') || (chr >= 'a' && <= 'z') || chr == '_' ) {
+	} else if( (chr >= 'A' && chr <= 'Z') || (chr >= 'a' && chr <= 'z') || chr == '_' ) {
 		return CC_ALPHA;
 	} else if( chr == '0' ) {
 		return CC_ZERO;
@@ -23,7 +23,7 @@ int classify( char chr ) {
 		return CC_STAR;
 	} else if( chr == '+' || chr == '-' || chr == '%' ) {
 		return CC_ARITH;
-	} else if( chr >= 0 && <= 127 ) {
+	} else if( __isascii(chr) ) {
 		return CC_OTHER;
 	} else if( chr == EOF ) {
 		return CC_EOF;
@@ -33,11 +33,11 @@ int classify( char chr ) {
 
 }
 
-char* scanner( int states, int start, int accept ) {
+int scanner( int start, int accept, t_matrix tm[][NUM_CLASSES] ) {
 	char buf[MAX_TOKEN_SIZE];
 	int buf_idx = 0;
 	int current_state = start;
-	char chr = ' ';
+	int chr = ' ';
 	t_matrix transition; 
 
 	printf("%d ", current_state);
@@ -47,26 +47,22 @@ char* scanner( int states, int start, int accept ) {
 		current_state = transition.next;
 		printf("%d ", current_state);
 		if( current_state == 99 ) {
-			buf = NULL;
 			while( classify(chr) != CC_WS ) {
 				chr = getchar();	
 			}
-			break;
+			printf("rejected\n");
+			return 0;
 		} else if( chr == EOF ) {
 			printf("EOF\n");
-			break;
+			return 1;
 		} else if( transition.action == 's' ) {
-			buf[buf_idx] = chr;
+			buf[buf_idx] = (char) chr;
 			buf_idx++;
 		}
 	}
 
-	// put in tokenize?
-	if( buf == NULL ) {
-		printf("rejected\n")
-	} else {
-		buf[buf_idx] = '\0';
-		printf("recognized %s\n", buf);
-	}
+	buf[buf_idx] = '\0';
+	printf("recognized '%s'\n", buf);
+	return 0;
 }
 
