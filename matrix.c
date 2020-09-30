@@ -1,10 +1,13 @@
 /// file: matrix.c
-/// description:
+/// description: matrix.c is the implementation for the function that builds a
+/// transition matrix.
 /// @author Jesse Burdick-Pless jb4411
 
 #include "matrix.h"
 
-void build_tm_file( char *filename, int matrix_info[3], t_matrix tm[][NUM_CLASSES] ) {
+/// build a transition matrix
+
+void build_tm_file( char *filename, int matrix_info[2], t_matrix tm[][NUM_CLASSES] ) {
 	FILE *fp;
 
 	// open the TM file

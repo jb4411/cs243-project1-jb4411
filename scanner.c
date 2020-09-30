@@ -1,10 +1,13 @@
 /// file: scanner.c
-/// description:
+/// description: scanner.c is the implementation for functions that use a 
+/// transition matrix to classify tokens from standard input.
 /// @author Jesse Burdick-Pless jb4411
 
 #include "scanner.h"
 
 #define MAX_TOKEN_SIZE 79
+
+/// classify a character and return its class number
 
 int classify( int chr ) {
 	if( chr == ' ' || chr == '\t' || chr == '\n' ) {
@@ -32,6 +35,8 @@ int classify( int chr ) {
 	}
 
 }
+
+/// recognize tokens from standard input
 
 int scanner( int start, int accept, t_matrix tm[][NUM_CLASSES] ) {
 	char buf[MAX_TOKEN_SIZE];
