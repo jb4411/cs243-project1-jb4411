@@ -5,7 +5,7 @@
 
 #include "matrix.h"
 
-/// build a transition matrix
+/// build the transition matrix
 
 void build_tm_file( char *filename, int matrix_info[2], t_matrix tm[][NUM_CLASSES] ) {
 	FILE *fp;
@@ -97,3 +97,4 @@ void build_tm_file( char *filename, int matrix_info[2], t_matrix tm[][NUM_CLASSE
 	matrix_info[0] = start;
 	matrix_info[1] = accept;
 }
+

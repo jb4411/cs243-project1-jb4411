@@ -1,5 +1,5 @@
 /// file: matrix.h
-/// description: matrix.h is the interface for the function that builds a 
+/// description: matrix.h is the interface for the function that builds a
 /// transition matrix.
 /// @author Jesse Burdick-Pless jb4411
 
@@ -17,13 +17,13 @@
 typedef struct transition_matrix_ {
         int next;
         char action;
-} t_matrix; 
+} t_matrix;
 
-/// Build a transition matrix to be used by the scanner when classifying tokens. 
-/// 
-/// @param filename     a pointer to the name of the file that contains the 
+/// Build a transition matrix to be used by the scanner when classifying tokens.
+///
+/// @param filename     a pointer to the name of the file that contains the
 ///                     transition matrix
-/// @param matrix_info  an array that the start and sccepting stete numbers 
+/// @param matrix_info  an array that the start and sccepting state numbers
 ///                     are put into
 /// @param tm           an array of t_matrix structures that represents the
 ///                     transition matrix

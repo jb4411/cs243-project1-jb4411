@@ -1,5 +1,5 @@
 /// file: scanner.c
-/// description: scanner.c is the implementation for functions that use a 
+/// description: scanner.c is the implementation for functions that use a
 /// transition matrix to classify tokens from standard input.
 /// @author Jesse Burdick-Pless jb4411
 

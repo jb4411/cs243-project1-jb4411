@@ -1,7 +1,7 @@
-/// file: tokenize.c 
+/// file: tokenize.c
 /// description: a program that builds a transition matrix from a file passed
-/// to the program as a command line argument. This transitiuon matrix is then
-/// used to scan and recognize tokens from standard input.
+/// to the program as a command line argument. This transition matrix is then
+/// used to scan and recognize tokens from the standard input.
 /// @author Jesse Burdick-Pless jb4411
 
 #include <stdio.h>
@@ -11,12 +11,12 @@
 
 #define MAX_STATES 75
 
-/// The main function builds and prints the transition matrix built from a
-/// file passed in as a command line argument.This transition matrix is then
-/// used to recognize tokens from standard input. As tokens are being recognized
-/// state transitions are printed and if a valid token is recognized the token 
-/// is also printed. The scanner function is called until it returns 1, 
-/// indicating that EOF has been reached at which point execution terminates.
+/// The main function builds and prints the transition matrix which is built
+/// from a file passed in as a command line argument. This transition matrix is
+/// then used to recognize tokens from standard input. As tokens are being
+/// recognized state transitions are printed and if a valid token is recognized
+/// the token is also printed. The scanner function is called until it returns
+/// 1 indicating that EOF has been reached at which point execution terminates.
 ///
 /// @param argc integer value for the number of command line input
 ///        values
@@ -24,7 +24,8 @@
 /// @return 0 to tell the OS that the process ran successfully, OR
 ///         return 1 to tell the OS there were not enough command line
 ///         arguments
- 
+
+
 int main(int argc, char *argv[]) {
 	if( argc < 2 ) {
 		printf("usage: ./tokenize tmfile\n");
