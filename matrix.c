@@ -77,18 +77,18 @@ void build_tm_file( char *filename, int matrix_info[2], t_matrix tm[][NUM_CLASSE
 	// print the matrix
 	printf("Scanning using the following matrix:\n ");
 	for(i = 0; i < NUM_CLASSES; ++i) {
-		printf("    %d", i);
+		printf("   %2d", i);
 	}	
 	printf("\n");
 
 	i = start;
 	while( i < states ) {
-		printf( " %d  ", i );
+		printf( " %d", i );
 		for(int j = 0; j < NUM_CLASSES; ++j) {
 			if( tm[i][j].next < 10 ) { 
 				printf(" ");
 			}
-			printf("%d%c  ", tm[i][j].next, tm[i][j].action);
+			printf("  %d%c", tm[i][j].next, tm[i][j].action);
 		}
 		printf("\n");
 		i++;
