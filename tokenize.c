@@ -28,7 +28,7 @@
 
 int main(int argc, char *argv[]) {
 	if( argc < 2 ) {
-		printf("usage: ./tokenize tmfile\n");
+		fprintf( stderr, "usage: ./tokenize tmfile\n");
 		return 1;
 	}
 	

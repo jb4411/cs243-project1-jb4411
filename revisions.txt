@@ -1,0 +1,41 @@
+commit b3d5050bf17cc3b30c814bb8c39a75dd84a59d09
+Author: Jesse  Burdick-Pless <jb4411@cs.rit.edu>
+Date:   Thu Oct 1 17:25:28 2020 -0400
+
+    Fixed an issiue with how the matrix was printed.
+
+commit 514372d8dfe8a3b4a878243ac4e596c1b43149bf
+Author: Jesse  Burdick-Pless <jb4411@cs.rit.edu>
+Date:   Thu Oct 1 17:10:36 2020 -0400
+
+    Proofread comments.
+
+commit 0aa88de3c3706add30aa161d44f6a0609f26bf66
+Author: Jesse  Burdick-Pless <jb4411@cs.rit.edu>
+Date:   Wed Sep 30 16:41:53 2020 -0400
+
+    Added documentation to tokenize.c, matrix.h, matrix.c, scanner.h, and scanner.c.
+
+commit 99fe98ddd5fb51da0504ab2ae3d0548fc5e94ea9
+Author: Jesse  Burdick-Pless <jb4411@cs.rit.edu>
+Date:   Tue Sep 29 14:26:58 2020 -0400
+
+    Fixed scanner.c. Began testing code.
+
+commit fbe37216d40af380479092f4e524d4aaa38539c7
+Author: Jesse  Burdick-Pless <jb4411@cs.rit.edu>
+Date:   Tue Sep 29 13:35:56 2020 -0400
+
+    Worked on scanner.c and scanner.h.
+
+commit 33d4eeed67e19f19728b81f1cec7b3e92015f22e
+Author: Jesse  Burdick-Pless <jb4411@cs.rit.edu>
+Date:   Sun Sep 27 16:38:18 2020 -0400
+
+    created matrix.c and moved tm file reading code to matrix.c. Also created a struct to used for the transition matrix.
+
+commit 760058a36ec7e2ee935a53fb0da8fc63e6d2bc8c
+Author: Jesse  Burdick-Pless <jb4411@cs.rit.edu>
+Date:   Sun Sep 27 16:13:38 2020 -0400
+
+    started working on tokenize.c.
